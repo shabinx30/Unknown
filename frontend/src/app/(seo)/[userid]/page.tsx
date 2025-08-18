@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 const Profile = async ({ params }: { params: { userid: string } }) => {
-    const { userid } = await params;
+    const { userid } = params;
     const data: IUser = await findUser(userid);
     if (!data) {
         notFound();
